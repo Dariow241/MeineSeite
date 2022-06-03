@@ -1,0 +1,194 @@
+
+* {
+  background-color: white;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+
+nav {
+  background-color: black;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li a, #titlenav {
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: black;
+}
+  
+
+nav ul li a:hover {
+  background-color: white;
+  color: black;
+}
+  
+nav ul li a.active {
+  background-color: white;
+  color: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: 100px;
+}
+
+body {
+  background-image: url("../assets/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
+
+
+#wrapper {
+  width: 80%;
+  margin: 0px auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#titlenav {
+  float:  left;
+  font-weight: bold;
+}
+
+header, nav, section, article, footer { 
+  display: block; 
+}
+
+
+#port {
+  height: 30%;
+  width:  30%;
+  margin: 20px 20px;
+  float: left;
+}
+
+.field {
+  border-style: solid;
+  border-color: black;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.cllfix {
+  clear: both;
+}
+
+.left {
+  float: left;
+  width:  48%;
+}
+
+.right {
+  float: right;
+  width: 48%;
+}
+
+.lefttxt {
+  float: left;
+  width:  45%;
+}
+
+.righttxt {
+  float: right;
+  width: 55%;
+}
+
+div.field ul {
+  margin: 20px 20px;
+}
+
+div.field li {
+  padding: 5px;
+  list-style-type: square;
+}
+
+table {
+  margin: 20px 20px;
+}
+
+td {
+  font-size: 20px;
+  padding: 5px;
+}
+
+
+h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin: 20px 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 15px;
+}
+
+#htmlb {
+  height: 212px;
+  width:  150px;
+}
+
+#images img {
+  height:20%;
+  width:20%;
+  margin: 5%;
+}
+
+.fade {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.5;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+tr {
+  border-bottom: 2px solid black;
+}
+
+footer {
+  background-color: black;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+
+ul li a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: black;
+}
+
+
+
+
