@@ -1,4 +1,4 @@
-
+/* Allgemein layout */
 * {
   background-color: white;
   margin: 0 auto;
@@ -6,7 +6,11 @@
   font-family: arial;
 }
 
+header, nav, section, article, footer { 
+  display: block; 
+}
 
+/* Nav Style und layout */
 nav {
   background-color: black;
   overflow: hidden;
@@ -26,7 +30,6 @@ nav ul li a, #titlenav {
   background-color: black;
 }
   
-
 nav ul li a:hover {
   background-color: white;
   color: black;
@@ -43,6 +46,12 @@ header {
   height: 100px;
 }
 
+#titlenav {
+  float:  left;
+  font-weight: bold;
+}
+
+/* Inhalt layout */
 body {
   background-image: url("../assets/background.jpg");
   background-repeat: no-repeat;
@@ -51,8 +60,6 @@ body {
   background-attachment: fixed;
 }
 
-
-
 #wrapper {
   width: 80%;
   margin: 0px auto;
@@ -60,54 +67,32 @@ body {
   padding: 10px;
 }
 
-#titlenav {
-  float:  left;
-  font-weight: bold;
-}
 
-header, nav, section, article, footer { 
-  display: block; 
-}
-
-
-#port {
-  height: 30%;
-  width:  30%;
-  margin: 20px 20px;
-  float: left;
-}
-
+/* Feld layout */
 .field {
   border-style: solid;
   border-color: black;
   display: inline-block;
   font-size: 20px;
+  margin: 0 15px;
+}
+
+/* Float und clear */
+.left {
+  float: left;
+  width:  50%;
+}
+
+.right {
+  float: right;
+  width: 50%;
 }
 
 .cllfix {
   clear: both;
 }
 
-.left {
-  float: left;
-  width:  48%;
-}
-
-.right {
-  float: right;
-  width: 48%;
-}
-
-.lefttxt {
-  float: left;
-  width:  45%;
-}
-
-.righttxt {
-  float: right;
-  width: 55%;
-}
-
+/* Auflistung Style */
 div.field ul {
   margin: 20px 20px;
 }
@@ -117,7 +102,9 @@ div.field li {
   list-style-type: square;
 }
 
+/* Tabelle Style */
 table {
+  border-collapse: collapse;
   margin: 20px 20px;
 }
 
@@ -126,29 +113,64 @@ td {
   padding: 5px;
 }
 
+tr {
+  border-bottom: 2px solid black;
+}
 
+/* Text Style */
 h1 {
   font-size: 1.5em;
   text-transform: uppercase;
-  margin: 20px 20px;
-  margin-bottom: 10px;
+  margin: 5px 15px;
 }
 
 p {
   margin: 15px;
 }
 
-#htmlb {
-  height: 212px;
-  width:  150px;
+legend {
+  font-size: 1.5em;
+  text-align: bold;
+  text-transform: uppercase;
+  margin: 20px 20px;
+  margin-bottom: 10px;
 }
 
-#images img {
-  height:20%;
-  width:20%;
-  margin: 5%;
+/* Element layout */
+label {
+  margin-bottom: 10px;
 }
 
+button {
+  margin: 10px !important;
+}
+
+/* Bild layout */
+.icon{
+  float: right; 
+  width: 60px;
+  margin: 20px ;
+}
+
+#port {
+  width:  200px;
+  margin: 20px;
+  float: left;
+}
+
+#htmlb{
+  height:338px;
+  width:338px;
+  margin: 20px 20px 20px 60px;
+}
+
+img.fade{
+  height:338px;
+  width:240px;
+  margin: 20px 60px;
+}
+
+/* Fade */
 .fade {
   opacity: 1;
   transition: opacity .25s ease-in-out;
@@ -160,26 +182,18 @@ p {
   opacity: 0.5;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-
-tr {
-  border-bottom: 2px solid black;
-}
+/* Footer Style */
 
 footer {
   background-color: black;
   overflow: hidden;
 }
 
-ul {
+footer ul {
   list-style: none;
-  text-align: left;
 }
 
-ul li a {
+footer ul li a {
   float: left;
   color: white;
   text-align: center;
@@ -189,6 +203,23 @@ ul li a {
   background-color: black;
 }
 
+/* Validierung anzeige */
+label.error{
+  color: red;
+}
+        
+label.valid{
+  color: green;
+}
+
+input.error{
+  border-color: red;
+  color: red; 
+}
+
+input.valid{
+  border-color: green;
+}
 
 
 

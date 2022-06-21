@@ -1,22 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
 		<meta charset="utf-8">
 		<link href="../css/style.css" rel="stylesheet">
 		<link href="../css/bootstrap.min.css" rel="stylesheet"/>
-		<style>
-			legend{
-  				font-size: 1.5em;
-  				text-align: bold;
-  				text-transform: uppercase;
-  				margin: 20px 20px;
-  				margin-bottom: 10px;
-			}
-
-			label{
-				margin-bottom: 10px;
-			}
-		</style>
 		<title>Dario Willi</title>
 	</head>
 	<body>
@@ -24,37 +11,46 @@
 			<nav>
 				<a href="../index.html" id="titlenav">MY WEBSITE</a>
 				<ul>
-					<li><a class="active" href="pages/contact.html">CONTACT</a></li>
-					<li><a href="../index.html#experience">EXPERIENCE</a></li>
-					<li><a href="../index.html#itskills">IT SKILLS</a></li>
-					<li><a href="../index.html#myprofil">MY PROFIL</a></li>
-					<li><a href="../index.html#aboutme">ABOUT ME</a></li>
+					<li><a class="active" href="../pages/contact.html">CONTACT</a></li>
 					<li><a href="../index.html">HOME</a></li>
 				</ul>
 				<div class="cllfix"></div>
 			</nav>
 		</header>
 		<div id="wrapper">
-			<form novalidate action="javascript:alert('Beim senden des Formulars ist ein problem aufgetreten')" name="form" method="post" onsubmit="return testen()">
-				<fieldset id="kontakt">
-					<legend>contact</legend>
+			<form id="userform" name="userform" action="../php/speicherung.php" method="post">
+				<h1>Termin Anfrage</h1>
+				<fieldset>
 					<div class="form-group">
-					<p><label>Firmenname</label><br/>
-					<input type="text" class="form-control" name="firma" required autofocus></p></div>
-					<div class="form-group">
-					<p><label>Ansprechsperson</label><br/>
-					<input type="text" class="form-control" name="person"></p></div>
-					<div class="form-group">
-					<p><label>Telefon</label><br/>
-					<input type="text" class="form-control" name="telefon"></p></div>
-					<div class="form-group">
-					<p>Bei problemen mit dem Formular oder sonstigen Anliegen, können Sie mich kontaktieren unter<br/>Email: dari.willi@bluewin.ch<br/>Telefon: 079 465 53 31</p>
-					<p><input type="submit" class="btn btn-primary" name="senden" value="senden"></p>
+						<label for="vorname">Vorname*</label>
+						<input type="text" class="form-control" name="vorname" id="vorname" autofocus>
 					</div>
-					<br />
-					<br />
-					<br />
+					<div class="form-group">
+						<label for="nachname">Nachname*</label>
+						<input type="text" class="form-control" name="nachname" id="nachname">
+					</div>
+					<div class="form-group">
+						<label for="firma">Firmenname*</label>
+						<input type="text" class="form-control" name="firma" id="firma">
+					</div>
+					<div class="form-group">
+						<label for="telefon">Telefon*</label>
+						<input type="text" class="form-control" name="telefon" id="telefon">
+					</div>
+					<div class="form-group">
+                    	<label for="datum">Datum:*</label>
+                        <select class="form-control" name="datum" id="datum" required>
+                        	<option value="">Wähle ein Datum</option>
+                            <option value="2022-06-22">22.06.2022</option>
+                            <option value="2022-06-29">29.06.2022</option>
+                            <option value="2022-07-06">06.07.2022</option>
+                            <option value="2022-07-13">13.07.2022</option>
+                        </select>
+                    </div>
 				</fieldset>
+				<div class="form-group">
+		   			<button type="submit" class="btn btn-primary">Senden</button>
+				</div>
 		    </form>
 		</div>
 		<footer>
@@ -62,12 +58,13 @@
 				<li><a href="#">Impressum</a></li>
 				<li><a href="#">AGB</a></li>
 				<li><a href="#">Datenschutz</a></li>
-				<li style="float:right; margin-right:20px;"><a href="mailto:dari.willi@bluewin.ch"><img src="../img/email.png" title="Email" width="40px" hight="40px"></a></li>
-					<li style="float:right;"><a href="../assets/lebenslauf.pdf"><img src="../img/lebenslauf.jpg" title="Lebenslauf" width="40px" hight="40px"></a></li>
 			</ul>
+			<a href="mailto:dari.willi@bluewin.ch"><img src="../img/email.png" title="Email" class="icon"></a>
+			<a href="../assets/lebenslauf.pdf"><img src="../img/lebenslauf.jpg" title="Lebenslauf" class="icon"></a>
 			<div class="cllfix"></div>
 		</footer>
-		<script src="../js/js.js"></script>
+		<script src="../js/jquery-3.1.1.js"></script>
+		<script src="../js/jquery.validate.min.js"></script>
+		<script src="../js/validate.js"></script>
 	</body>
-	
 </html>
