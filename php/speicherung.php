@@ -31,7 +31,6 @@
 			}
 			$db = new PDO('mysql:host=localhost;dbname=termin', 'root', '');
 			$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$datum = filter_input(INPUT_POST, $_POST['datum'], FILTER_SANITIZE_STRING);
 			$neuer_eintrag = array();
 			$neuer_eintrag['vorname'] = $_POST['vorname'];
 			$neuer_eintrag['nachname'] = $_POST['nachname'];
