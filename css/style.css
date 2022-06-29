@@ -1,8 +1,9 @@
 /* Allgemein layout */
 * {
-  background-color: white;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  background-color: white;
   font-family: arial;
 }
 
@@ -219,6 +220,11 @@ input.error{
 
 input.valid{
   border-color: green;
+}
+
+/* Hinweis */
+#hinweis p{
+  color: red;
 }
 
 
